@@ -151,7 +151,7 @@ if __name__ == "__main__":
 ---
 
 ### 6.3 Mathematical Proof
-![Manuscript-01: Algebraic Derivation of CJ and First Law](./images/derivation.jpg)
+![Manuscript-01: Algebraic Derivation of CJ and First Law]([./images/derivation.jpg](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/01_algebraic_derivation.png))
 *Caption: Julian's original handwritten derivation, showing the step-by-step transition from specific quinponent observations (Step 1 & 2) to the generalized Julian Constant formula.*
 
 #### Step 1: Specific Observation (The Case of 5)
@@ -244,7 +244,7 @@ For k > 1, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which imp
 ### 8.1 Etymology 
 The term **"Recurstable"** is an original portmanteau created by Julian Wong, synergizing **Recurrence** (the deterministic evolution of terms) and **Stable** (the invariance of terminal digits).
 
-![Manuscript-02: Knowledge Tree of Recurstable Numbers]([./images/knowledge-tree.jpg](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/01_algebraic_derivation.png))
+![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/02_knowledge_tree.png)
 *Caption: Julian’s original knowledge map, visualizing the "Recurstable Number" as the central trunk connecting modular arithmetic and prime analysis.*
 
 ### 8.2 Definition
