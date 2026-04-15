@@ -151,7 +151,7 @@ if __name__ == "__main__":
 ---
 
 ### 6.3 Mathematical Proof
-![Manuscript-01: Algebraic Derivation of CJ and First Law](./images/derivation.jpg)
+![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/01_algebraic_derivation.png)
 *Caption: Julian's original handwritten derivation, showing the step-by-step transition from specific quinponent observations (Step 1 & 2) to the generalized Julian Constant formula.*
 
 #### Step 1: Specific Observation (The Case of 5)
@@ -244,7 +244,7 @@ For k > 1, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which imp
 ### 8.1 Etymology 
 The term **"Recurstable"** is an original portmanteau created by Julian Wong, synergizing **Recurrence** (the deterministic evolution of terms) and **Stable** (the invariance of terminal digits).
 
-![Manuscript-02: Knowledge Tree of Recurstable Numbers](./images/knowledge-tree.jpg)
+![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/02_knowledge_tree.png)
 *Caption: Julian’s original knowledge map, visualizing the "Recurstable Number" as the central trunk connecting modular arithmetic and prime analysis.*
 
 ### 8.2 Definition
@@ -280,7 +280,7 @@ By systematically adjusting the "Confusion Level" (Entropy) of the terminal digi
 * **Medium Entropy:** Pattern-switching and quasi-periodic resonance under shifting tail disturbances.
 * **High Entropy:** Research into carry-over conservation and structural persistence at the **"Edge of Chaos."**
 
-![Manuscript-03: Phase Transition of Julian Carry Dynamics](./images/phase-transition.jpg)
+![Manuscript-03: Phase Transition of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/03_phase_transition_concept.png)
 *Caption: Julian's conceptual diagram mapping the transition from perfect order to deterministic chaos as tail entropy increases.*
 
 The ultimate goal of this trajectory is to reveal how the internal logic of numbers maintains its structural integrity even when subjected to external turbulence.
