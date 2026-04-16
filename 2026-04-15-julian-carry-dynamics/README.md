@@ -87,7 +87,6 @@ Through computational testing, I identified a class of numbers that follow the s
 | **1**             | 36         | 6                 | **21**         | $A_n = 36(A_{n-1}) + 21$   |
 | **1**             | 11         | 1                 | **1**          | $A_n = 11(A_{n-1}) + 1$    |
 | **2**             | **5**      | **25**            | **1**          | $A_n = 5(A_{n-1}) + 1$     |
-| **2**             | 25         | 25                | **6**          | $A_n = 25(A_{n-1}) + 6$    |
 | **2**             | 26         | 76                | **19**         | $A_n = 26(A_{n-1}) + 19$   |
 | **2**             | 45         | 25                | **11**         | $A_n = 45(A_{n-1}) + 11$   |
 | **2**             | 76         | 76                | **57**         | $A_n = 76(A_{n-1}) + 57$   |
@@ -145,14 +144,14 @@ def verify_julian_first_law(B, k, max_n):
 
 
 if __name__ == "__main__":
-    verify_julian_first_law(B=5,  k=2, max_n=10)
+    verify_julian_first_law(B=5, k=2, max_n=10)
 ```
 
 ---
 
 ### 6.3 Mathematical Proof
-![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/01_algebraic_derivation.png)
-*Caption: Julian's original handwritten derivation, showing the step-by-step transition from specific quinponent observations (Step 1 & 2) to the generalized Julian Constant formula.*
+![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
+*Caption: Julian’s original handwritten manuscript, providing the formal proof of Julian’s First Law and the derivation of the Julian Constant ($C_J$).*
 
 #### Step 1: Specific Observation (The Case of 5)
 
@@ -184,10 +183,13 @@ For any base $B$ with a stable tail $T$ of length $k$:
 2. $B^{n-1} = 10^k \cdot A_{n-1} + T$
 
 From (2), multiply by $B$:
+
 $$B^n = 10^k \cdot B \cdot A_{n-1} + T \cdot B$$
 
 Now, set the two expressions for $B^n$ equal:
+
 $$10^k \cdot A_n + T = 10^k \cdot B \cdot A_{n-1} + T \cdot B$$
+
 $$10^k \cdot A_n = 10^k \cdot B \cdot A_{n-1} + (T \cdot B - T)$$
 
 Divide by $10^k$ to isolate $A_n$:
@@ -244,8 +246,8 @@ For k > 1, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which imp
 ### 8.1 Etymology 
 The term **"Recurstable"** is an original portmanteau created by Julian Wong, synergizing **Recurrence** (the deterministic evolution of terms) and **Stable** (the invariance of terminal digits).
 
-![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/02_knowledge_tree.png)
-*Caption: Julian’s original knowledge map, visualizing the "Recurstable Number" as the central trunk connecting modular arithmetic and prime analysis.*
+![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/02_knowledge_tree.png)
+*Caption: Julian’s original knowledge map, visualizing where Julian places his original 'Recurstable Number' within the broader landscape of Number Theory.*
 
 ### 8.2 Definition
 A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) maintains an **invariant suffix** (a stable tail $T$) of length $k$. 
@@ -280,7 +282,7 @@ By systematically adjusting the "Confusion Level" (Entropy) of the terminal digi
 * **Medium Entropy:** Pattern-switching and quasi-periodic resonance under shifting tail disturbances.
 * **High Entropy:** Research into carry-over conservation and structural persistence at the **"Edge of Chaos."**
 
-![Manuscript-03: Phase Transition of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/assets/03_phase_transition_concept.png)
+![Manuscript-03: Phase Transition of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/03_phase_transition_concept.png)
 *Caption: Julian's conceptual diagram mapping the transition from perfect order to deterministic chaos as tail entropy increases.*
 
 The ultimate goal of this trajectory is to reveal how the internal logic of numbers maintains its structural integrity even when subjected to external turbulence.
