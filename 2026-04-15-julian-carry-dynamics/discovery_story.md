@@ -1,6 +1,6 @@
 # 母亲的记录 | A Mother's Record
 **记录人 (Author): 仓东 (Dong Cang)**
-**日期 (Date): 2026年4月11日**
+**日期 (Date): 2026年4月15日**
 ---
 
 ## 中文版 (Chinese Version)
@@ -19,7 +19,7 @@
 
 在此过程中，他再次提出了新的发现：所有以 0、1、5、6 结尾的数字都具有类似的性质。 他解释道：因为这些数字乘以自己后，末位依然是它本身，所以它们的幂在尾部一定是稳定的。基于此，我又协助他对这部分新发现也进行了证明和命名。
 
-考虑到他年龄尚小，不宜长时间使用电脑，大多时候是由我倾听他的口述并代为打字。我尝试用自己掌握的知识，尽可能用专业的学术词汇去“翻译”他的想法。Julian 初步勾勒出了他第一份数学研究的轮廓。
+考虑到他年龄尚小，不宜长时间使用电脑，大多时候是由我倾听他的口述并代为打字。我尝试用自己掌握的知识，尽可能用专业的学术词汇去“翻译”他的想法。经过六天的努力，Julian 初步勾勒出了他第一份数学研究的轮廓。
 
 但在推导的终点，他反而提出了更多深邃的问题：比如，如果将多个‘尾数稳定数’（Recurstable Numbers）相加，是否依然存在某种普适的恒定规律？如果尾数本身是不稳定的，其中是否也潜伏着尚未被发现的秩序？我告诉他：孩子，妈妈会陪着你，我们一起去把这些规律找出来。”
 
@@ -44,7 +44,8 @@ Thinking this might be a niche branch of number theory worth documenting, I assi
 
 During this process, he made another discovery: all numbers ending in 0, 1, 5, or 6 share similar properties. He explained: because these numbers result in themselves when multiplied, their "tails" remain stable across their powers. Based on this, I assisted him in formalizing the proof and naming for this expansion as well.
 
-Given his young age, I listened to his dictation and typed for him, attempting to "translate" his insights into professional academic terminology. Over two days, Julian has completed the first draft of his first math paper.
+Given his young age, I listened to his dictation and typed for him, attempting to "translate" his insights into professional academic terminology. Over six days, Julian has completed the first draft of his first math paper.
+
 Yet, his curiosity didn't stop there. He began raising deeper questions: What happens if we add two Recurstable Numbers together? Is there a universal law hidden within? And if the terminal digits are unstable, can we still find a pattern of order?
 I told him: "Mama will be right there with you to discover these laws, one by one."
 
