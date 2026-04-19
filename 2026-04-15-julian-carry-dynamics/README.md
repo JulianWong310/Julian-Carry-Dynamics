@@ -155,7 +155,7 @@ if __name__ == "__main__":
 This is my original handwritten manuscript, providing the  initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
 
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
-*Caption: Original handwritten proof of Julian's First Law and The Julian Constant*
+*Caption: Original handwritten proof of Julian's First Law and The Julian Constant($C_J$)*
 
 #### Step 1: Specific Observation (The Case of 5)
 
@@ -271,7 +271,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 
 **Mathematical Intuition:**
 
-* **Necessity (The DNA Test):** For a tail to be stable, the last digit must satisfy $T2≡T1(mod10)$. Testing all single digits confirms that only $0, 1, 5, 6$ possess this natural stability.
+* **Necessity (The DNA Test):** For a tail to be stable, the last digit must satisfy $T^2 ≡ T \pmod{10}$. Testing all single digits confirms that only $0, 1, 5, 6$ possess this natural stability.
 * **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee the **Julian Constant ($C_J$)** is an integer. 
 
 ---
