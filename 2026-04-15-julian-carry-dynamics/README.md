@@ -159,7 +159,7 @@ if __name__ == "__main__":
 This is my original handwritten manuscript, providing the  initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
 
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
-*Caption: Original handwritten derivation of Julian's First Law and the Julian Constant ($C_J$)*
+*Caption: Original handwritten derivation of Julian's First Law and the Julian Constant.*
 
 #### Step 1: Specific Observation (The Case of 5)
 
@@ -241,7 +241,7 @@ causing the linear structure of the leading part to collapse.
 ### II. The Integrality Guarantee
 For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer.  Therefore,  the last digit of a stable tail can only be $0, 1, 5,$ or $6$.
 
-**Case: $k = 1$**
+For $k = 1$:
 * **For $0$ and $1$:** The product $T× (B-1)$ is always $0$, which is naturally divisible by $10$.
 * **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ must be an even number. Any even number multiplied by $5$ results in a multiple of $10$.
 * **For $6$:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
@@ -262,7 +262,7 @@ The term **"Recurstable"** is an original portmanteau created by me, synergizing
 I illustrated a knowledge map, visualizing where I applied my original ‘Recurstable Number’ within the landscape of Number Theory.
 
 ![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/02_knowledge_tree.png)
-*Caption: Julian’s original knowledge map of Recurstable Numbers*
+*Caption: Julian’s original knowledge map of Recurstable Numbers.*
 
 
 ### 8.2 Definition
@@ -272,7 +272,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 ### 8.3 Core Properties
 1. The leading part of a Recurstable Number follows $A_n = B \cdot A_{n-1} + C_J$.
 
-2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit $B \pmod{10} \in \{0, 1, 5, 6\}$. 
+2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit $B^n \pmod{10} \in \{0, 1, 5, 6\}$. 
 
 **Mathematical Intuition:**
 
@@ -287,7 +287,7 @@ Julian Carry Dynamics is my approach to observing how the leading digits of a nu
 I defined a research roadmap to guide my exploration and divided it into three phases, each corresponding to increasing levels of tail complexity.
 
 ![Manuscript-03:Research Roadmap of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/03_research_roadmap.png)
-*Caption: Three-phase research roadmap of Julian Carry Dynamics*
+*Caption: Three-phase research roadmap of Julian Carry Dynamics.*
 
 ---
 
@@ -321,7 +321,7 @@ $11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$  (repeats every $10$ steps)
 I sketched this conceptual diagram to visualize the phase transition from low to high entropy.
 
 ![Manuscript-04: Phase Transition Concept](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/04_phase_transition_concept.png)
-*Caption: Julian's conceptual diagram mapping the Phase Transition of Julian Carry Dynamics*
+*Caption: Julian's conceptual diagram mapping the Phase Transition of Julian Carry Dynamics.*
 
 In Phase III, the tail reaches a level of complexity where it seems practically random.
 
