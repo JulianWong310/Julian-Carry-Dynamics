@@ -12,10 +12,15 @@
 ---
 
 ## Foreword 
-This article began with a conversation with my 9-year-old son, Julian. One afternoon, he was excited to share his "super cool secret" about what he noticed with the powers of 5 and how the front of the numbers followed a "hidden rule."
-
-To protect his discovery and provide a solid foundation should he choose to pursue this research in the future, 
-I have translated his spoken reasoning into formal written language and applied for a DOI.
+>It all started on a regular Friday afternoon. I was hanging out in my mom’s room, 
+just playing as I usually do. But my brain doesn't really stay still—it’s like there’s always a background track of math problems running in my head. 
+Sometimes, right in the middle of playing, a pattern just "pops" into my mind and I have to stop and follow it.   
+That day, it was the powers of 5. Suddenly, I saw this hidden rule about how the front of the numbers was growing, and I couldn't keep it to myself. 
+I ran to my mom and said, "I found a super cool secret!"   
+We started talking about it, and the more we talked, the more excited we got. We stayed up chatting for a long time, and mom said this might actually be a big discovery. I wanted to make sure these ideas were safe and shared properly, 
+so I asked her to help me turn my "discovery talk" into a real research paper.   
+As I explained my thoughts and calculations out loud, she translated them into the professional language you see here. 
+This is the story of how my Friday afternoon secret became **Julian Carry Dynamics**.
 
 ---
 
@@ -108,10 +113,11 @@ $$A_n = B \cdot A_{n-1} + C_J $$
 
 **The Julian Constant Formula:**
 The constant $C_J$ is determined by the "carry-over" from the tail's multiplication when the tail is stable:
+
 $$C_J = \frac{B \cdot T - T}{10^k}$$
 
 **Variable Definitions**
-* **$A_n$**: The leading part of the number, calculated as the integer value remaining after removing the last $k$ digits (the stable tail).
+* **$A_n$**: The leading part of the number, defined as the integer value remaining after removing the last $k$ digits (the stable tail).
 * **$B$**: The base of the power being calculated.
 * **$n$**: The exponent ($n \ge 2$).
 * **$T$ :** The recurring ending value of $B^n$.
@@ -156,7 +162,7 @@ if __name__ == "__main__":
 ---
 
 ### 6.3 Mathematical Proof
-This is my original handwritten manuscript, providing the initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
+This is my original handwritten manuscript, providing the formal derivation of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
 
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
 *Caption: Original handwritten derivation of Julian's First Law and the Julian Constant.*
@@ -218,11 +224,16 @@ $$A_n = B \cdot A_{n-1} + \frac{T \cdot B - T}{10^k}$$
 
 Q.E.D
 
+*Note: According to the formula for the Julian Constant, 
+the linear recurrence exists only because the tail (T) stays constant (stable).
+If the tail were unstable, the constant ($C_J$) would become a variable, 
+and the linear structure of the leading part would collapse.*
+
 ---
 
 ### 6.4 Explanation: The Geometry of Interference
 
-Mathematically, without the carry‑over effect from the tail, one might expect the leading part ($A_n$) to grow purely as a power function ($B^n$). However, the Stable Tail ($T$) creates a persistent “interference”—the Julian Constant ($C_J$).
+Mathematically, without the carry‑over effect from the tail, one might expect the leading part ($A_n$) to grow purely as a power function ($B^n$). However, the stable tail ($T$) creates a persistent “interference”—the Julian Constant ($C_J$).
 
 Picture a perfectly calm lake as a metaphor for the growth of a number. Multiplying by the base would produce a smooth, predictable wave across the surface. However, at each step, the stable tail acts like a small stone dropped into the water, making ripples that nudge the leading part away from its original path.
 
@@ -230,34 +241,11 @@ The beauty of Julian’s First Law lies in the realization that this shift isn't
 
 ---
 
-## 7. Corollaries of Julian's First Law
-
-### I. The Stability Requirement
-According to the formula for the Julian Constant, 
-the linear recurrence exists only because the Tail (T) stays constant (stable).
-If the tail were unstable, the constant ($C_J$) would become a variable, 
-and the linear structure of the leading part would collapse.
-
-### II. The Integrality Guarantee
-For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer.  Therefore,  the last digit of a stable tail can only be $0, 1, 5,$ or $6$.
-
-**Case ($k = 1$):** 
-* **For $0$ and $1$:** The product $T \cdot (B-1)$ is always $0$, which is divisible by $10$.
-* **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ is even. Any even number multiplied by $5$ results in a multiple of $10$.
-* **For $6$:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
-
-**Case ($k > 1$):**   
-If $C_J$  is an integer then $10^k$ divides $T \cdot (B−1)$, which implies $10$ also divides $T \cdot (B−1)$. Hence the last‑digit condition must still hold. 
-
-**Conclusion** — that $B$ must end in $0$, $1$, $5$, or $6$ — applies for any tail length $k$.
-
----
-
-## 8. Definition & Properties of Recurstable Numbers
+## 7. Definition & Properties of Recurstable Numbers
 
 > *"A Recurstable Number is defined through the nature of its structure: the absolute stillness of its Tail and the consistent logic of its Head."*
 
-### 8.1 Etymology 
+### 7.1 Etymology 
 The term **"Recurstable"** is an original portmanteau created by me, synergizing **Recurrence** (the deterministic evolution of terms) and **Stable** (the invariance of terminal digits).
 
 The knowledge map below shows where I placed my original ‘Recurstable Number’ within the landscape of Number Theory.
@@ -266,24 +254,45 @@ The knowledge map below shows where I placed my original ‘Recurstable Number�
 *Caption: Julian’s original knowledge map of Recurstable Numbers.*
 
 
-### 8.2 Definition
+### 7.2 Definition
 A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) has an **invariant suffix** — a stable tail $T$ of length $k$. 
 
 
-### 8.3 Core Properties
-1. The leading part of a Recurstable Number satisfies $A_n = B \cdot A_{n-1} + C_J$.
+### 7.3 Core Properties
 
-2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit is $0$, $1$, $5$, or $6$.
+1. **Linear Recurrence Relation** The leading part of a Recurstable Number satisfies the following linear recurrence:      
+   $A_n = B \cdot A_{n-1} + C_J$
 
-**Mathematical Intuition:**
-
-* **Necessity (The DNA Test):** If the last digit of $B$ is $0$, $1$, $5$, or $6$, then the last digit of $B^n$ never changes.
-
-* **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee that the Julian Constant ($C_J$) is an integer. 
+2. **The Terminal Digit Condition** A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit is $0$, $1$, $5$, or $6$.
 
 ---
 
-## 9. Future Work: Julian Carry Dynamics
+### 7.4 Mathematical Intuition of Property 2
+
+#### **I. Necessity**   
+If the last digit of $B$ is $0$, $1$, $5$, or $6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
+
+#### **II. Sufficiency**    
+**For $k = 1$:**    
+Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (1 - B)}{10}$ to be an integer, the product $T \cdot (1 - B)$ must end in $0$.
+
+Check each possible last digit $T$:
+* **$T = 0$:** Product is $0 \rightarrow$ ends in $0$ 
+* **$T = 1$:** $(1 - B)$ ends in $0 \rightarrow$ product ends in $0$ 
+* **$T = 5$:** $(1 - B)$ is even $\rightarrow$ $5 \times \text{even}$ ends in $0$ 
+* **$T = 6$:** $(1 - B)$ ends in $5 \rightarrow$ $6 \times 5 = 30$ ends in $0$ 
+* **Any other $T$ ($2, 3, 4, 7, 8, 9$):** The product never ends in $0$. 
+
+Thus, only $T \in \{0, 1, 5, 6\}$ satisfy the integrality requirement.
+
+**For $k > 1$:**    
+If $C_J$ is an integer, then $10^k$ divides $T \cdot (B - 1)$. This implies $10$ also divides $T \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
+
+**Conclusion:** The requirement that $B$ must end in $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
+
+---
+
+## 8. Future Work: Julian Carry Dynamics
 Julian Carry Dynamics is my way of observing how the leading digits of a number evolve as the tail (the ending digits) becomes more complex.
 
 I defined a research roadmap to guide my exploration and divided it into three phases, each corresponding to increasing levels of tail complexity.
@@ -311,7 +320,7 @@ At this stage, the tail is no longer constant, but it follows a repeating cycle.
 
 **Example: The $11^n$ Cycle**  
 I observed that the last two digits of $11^n$ follow a very predictable pattern:     
-$11$, $21$, $31$, $41$, $51$, $61$, $71$, $81$, $91$, $01$... (repeats every $10$ steps)
+$11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$ (repeats every $10$ steps)
 
 **Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary with it?  
 
@@ -329,7 +338,7 @@ In Phase III, the tail reaches a level of complexity where it seems practically 
 
 **Example: The $3^n$ "Wild" Cycle**  
 I tracked the last two digits of powers of 3, the sequence feels much more chaotic:  
-$03$, $09$, $27$, $81$, $43$, $29$, $87$, $61$, $83$, $49$, $47$, $41$, $23$, $69$, $07$, $21$, $63$, $89$, $67$, $01$...
+$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$       
 It takes exactly 20 steps to return to the start — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
 
 **Question:** When the tail gets this messy, does the leading part still follow a rule? And if so, what is the upper bound on its complexity?
@@ -346,7 +355,7 @@ That is why I keep exploring.
 
 ---
 
-## 10. Acknowledgments 
+## 9. Acknowledgments 
 
 1. **Intellectual Property & Naming Rights Assertion:**
 The core theoretical framework and mathematical insights presented in this study are the independent discoveries of **Julian Wong**. As the primary investigator, Julian Wong claims full naming rights and intellectual priority over the following terminology:
