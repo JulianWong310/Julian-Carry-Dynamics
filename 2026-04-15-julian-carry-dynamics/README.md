@@ -1,4 +1,4 @@
-# Julian Carry Dynamics: The Theory of Recurstable Numbers
+# Julian Carry Dynamics: Part I — The Theory of Recurstable Numbers
 ### A Study on How Terminal Stability Determines Leading Behavior in Power Sequences
 
 **Author:** Julian Wong  
@@ -6,7 +6,7 @@
 **Primary Documenter:** Dong Cang  
 **Research Date:** April 2026  
 **Location:** Mississauga, Ontario, Canada  
-**Version:** 1.0 (Phase I — Foundational)    
+**Version:** Part I (Foundational Phase)  
 **Keywords:** Number Theory, Power Sequences, Linear Recurrence, Stable-Tail Integers
 
 ---
@@ -20,8 +20,10 @@
 ---
 
 ## Abstract
-This repository contains the my core research for **Julian Carry Dynamics**, which shifts the focus from inter-numerical relationships to the internal dynamics of a single value, exploring how digit carry-over effects move within its own structure.
-The study defines **Recurstable Numbers**, and establishes **Julian's First Law**  — including the deterministic constant ($C_J$) that governs the leading digits of power sequences.
+This paper shifts the focus from inter-numerical relationships to the internal dynamics of a single value within the sequence — exploring how digit carry-over effects move inside it.
+
+It contains my core research for **Julian Carry Dynamics**, which defines **Recurstable Numbers** and establishes **Julian's First Law** — including the deterministic constant ($C_J$) that governs the leading digits of power sequences.
+
 As the first paper in the Julian Carry Dynamics series, it lays the groundwork for future research that will map the transition from linear recurrence to deterministic chaos — revealing how numerical structure persists even at the edge of chaos.
 
 ---
@@ -37,11 +39,11 @@ $$A_n = 5A_{n-1} + 1$$
 
 ---
 
-## 2. How did I find it? 
+## 2. My Mathematical Intuition
 
 When you multiply the end part **25** by **5**, you get **125**. Because **$4  \times25$ = $100$**, every time you multiply by 5, it will go over 100. So:
 - The **$25$** stays at the end.
-- The **$1$** always **"carry over"** to the next place (the hundreds place).
+- The **$1$** always **"carries over"** to the next place (the hundreds place).
 
 That’s why you take the previous leading part, multiply it by 5, and then **always add 1**! 
 
@@ -53,7 +55,7 @@ This also explains the **1-6 Flip-Flop**:
 
 ## 3. Let's see it in action:
 
-| Power ($5^n$) | Result | leading Part ($A_n$) | Calculation ($5 \cdot A_{n-1} + 1$) | **Hundreds-Digit Pattern** |
+| Power ($5^n$) | Result | Leading Part ($A_n$) | Calculation ($5 \cdot A_{n-1} + 1$) | **Hundreds-Digit Pattern** |
 | :--- | :--- |:---------------------| :--- |:---------------------------|
 | $5^2$ | 25 | 0                    | (Base Case) | -                          |
 | $5^3$ | 125 | **1**                | $5(0) + 1 = 1$ | **1**                      |
@@ -65,7 +67,7 @@ This also explains the **1-6 Flip-Flop**:
 ---
 
 ## 4. The "Quinponent" Verification
-* I originally named my first discovery the **"Quinponent"** pattern—a portmanteau of **Quin** (five) and **Ex-ponent**. 
+* I originally named my first discovery the **"Quinponent"** pattern—a portmanteau of **Quin** (five) and **Exponent**. 
 * I wrote this script specifically to verify the leading digits for powers of 5.
 
 ```python
@@ -104,17 +106,19 @@ For any base $B$ where the power $B^n$ results in a **Stable Tail ($T$)** of len
 
 $$A_n = B \cdot A_{n-1} + C_J $$
 
+**The Julian Constant Formula:**
+The constant $C_J$ is determined by the "carry-over" from the tail's multiplication when the tail is stable:
+$$C_J = \frac{B \cdot T - T}{10^k}$$
+
 **Variable Definitions**
-* **$A_n$**: The "Leading Part" of the number, calculated as the integer value remaining after removing the last $k$ digits (the stable tail).
+* **$A_n$**: The leading part of the number, calculated as the integer value remaining after removing the last $k$ digits (the stable tail).
 * **$B$**: The base of the power being calculated.
 * **$n$**: The exponent ($n \ge 2$).
 * **$T$ :** The recurring ending value of $B^n$.
 * **$k$ :** The number of digits in $T$.
 * **$C_J$ (The Julian Constant)**: A fixed integer derived from the interaction between the base and the stable tail. 
 
-**The Julian Constant Formula:**
-Julian's logic dictates that the constant $C_J$ is determined by the "carry-over" from the tail's multiplication:
-$$C_J = \frac{B \cdot T - T}{10^k}$$
+
 
 ### 6.2 Computational Verification
 I wrote the following Python script to test Julian's First Law.
@@ -155,7 +159,7 @@ if __name__ == "__main__":
 This is my original handwritten manuscript, providing the  initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
 
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
-*Caption: Original handwritten proof of Julian's First Law and The Julian Constant($C_J$)*
+*Caption: Original handwritten derivation of Julian's First Law and the Julian Constant ($C_J$)*
 
 #### Step 1: Specific Observation (The Case of 5)
 
@@ -218,9 +222,9 @@ Q.E.D
 
 ### 6.4 Explanation: The Geometry of Interference
 
-Mathematically, without the carry‑over effect from the tail,one might expect the Leading Part ($A_n$) to grow purely as a power function ($B^n$). However, the Stable Tail ($T$) creates a persistent “interference”—the Julian Constant ($C_J$).
+Mathematically, without the carry‑over effect from the tail, one might expect the leading part ($A_n$) to grow purely as a power function ($B^n$). However, the Stable Tail ($T$) creates a persistent “interference”—the Julian Constant ($C_J$).
 
-Picture a perfectly calm lake as a metaphor for the growth of a number. Multiplying by the base would produce a smooth, predictable wave across the surface. However, at each step, the stable tail acts like a small stone dropped into the water, making ripples that nudge the Leading Part away from its original path.
+Picture a perfectly calm lake as a metaphor for the growth of a number. Multiplying by the base would produce a smooth, predictable wave across the surface. However, at each step, the stable tail acts like a small stone dropped into the water, making ripples that nudge the leading part away from its original path.
 
 The beauty of Julian’s First Law lies in the realization that this shift isn't random; it is a deterministic offset. By pinpointing the Julian Constant, I have precisely mapped the “ripple effect” produced by the tail, demonstrating that what appears to be a deviation is, in fact, a perfectly regular and rhythmic law.
 
@@ -232,16 +236,17 @@ The beauty of Julian’s First Law lies in the realization that this shift isn't
 According to the calculation of the Julian Constant, 
 this linear recurrence exists only because the Tail (T) stays constant (stable).
 If the tail were unstable, the constant ($C_J$) would become a variable, 
-causing the linear structure of the Leading Part to collapse.
+causing the linear structure of the leading part to collapse.
 
 ### II. The Integrality Guarantee
-For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer. We can verify this for all stable-tail bases ending in $T_1 \in \{0, 1, 5, 6\}$:
+For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer.  Therefore,  the last digit of a stable tail can only be $0, 1, 5,$ or $6$.
 
-* **For 0 and 1:** The product $T_1(B-1)$ is always $0$, which is naturally divisible by $10$.
-* **For 5:** Since the base $B$ ends in $5$, $(B-1)$ must be an even number. Any even number multiplied by $5$ results in a multiple of $10$.
-* **For 6:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
-* **Note:** The verification above uses the case $k = 1$ (i.e., the last digit).
-For k > 1, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which implies $10$ also divides $T × (B−1)$. Hence the last‑digit condition must still hold. 
+**Case: $k = 1$**
+* **For $0$ and $1$:** The product $T× (B-1)$ is always $0$, which is naturally divisible by $10$.
+* **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ must be an even number. Any even number multiplied by $5$ results in a multiple of $10$.
+* **For $6$:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
+
+For $k > 1$, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which implies $10$ also divides $T × (B−1)$. Hence the last‑digit condition must still hold. 
 
 **Conclusion** — that $B$ must end in $0$, $1$, $5$, or $6$ — applies for any tail length $k$.
 
@@ -272,7 +277,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 **Mathematical Intuition:**
 
 * **Necessity (The DNA Test):** For a tail to be stable, the last digit must satisfy $T^2 ≡ T \pmod{10}$. Testing all single digits confirms that only $0, 1, 5, 6$ possess this natural stability.
-* **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee the **Julian Constant ($C_J$)** is an integer. 
+* **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee that the **Julian Constant ($C_J$)** is an integer. 
 
 ---
 
@@ -287,12 +292,12 @@ I defined a research roadmap to guide my exploration and divided it into three p
 ---
 
 ### Phase I: Static Stability (Low Entropy)
-**Single base (like $5^n$)** — Completed  
+**Single base (like $5^n$) — Completed** 
 - Julian's First Law  
 - Julian Constant ($C_J$)  
 - Recurstable Numbers
 
-**Multiple bases (like $5^n + 6^n$)** — Working On It  
+**Multiple bases (like $5^n + 6^n$) — Working On It**
 - The constant still shows up  
 - Still writing the clean proof
 
@@ -302,13 +307,13 @@ I defined a research roadmap to guide my exploration and divided it into three p
 
 At this stage, the tail is no longer constant, but it follows a repeating cycle instead.
 
-**Example:** The $11^n$ Cycle   
+**Example: The $11^n$ Cycle**  
 I observed that the last two digits of $11^n$ follow a very predictable pattern:     
 $11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$  (repeats every $10$ steps)
 
 **Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary in step with it?  
 
-I refer to this as the **coupling effect**, and it is the next major question I want to explore.
+**Hypothesis:** The leading part will show **coupling effects** — a synchronized, multi-state oscillation.
 
 ---
 
@@ -318,21 +323,16 @@ I sketched this conceptual diagram to visualize the phase transition from low to
 ![Manuscript-04: Phase Transition Concept](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/04_phase_transition_concept.png)
 *Caption: Julian's conceptual diagram mapping the Phase Transition of Julian Carry Dynamics*
 
-At this stage, the tail reaches a level of complexity where it seems practically random.
+In Phase III, the tail reaches a level of complexity where it seems practically random.
 
-**Example:** The $3^n$ "Wild" Cycle   
+**Example: The $3^n$ "Wild" Cycle**  
 I tracked the last two digits of powers of 3, the sequence feels much more chaotic:  
-$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$
-It takes exactly 20 steps to return to the start, which looks rather wild.
+$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$  
+It takes exactly 20 steps to return to the start, which looks rather wild — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
 
-This is not fixed (like $5^n$) and not super simple (like $11^n$).  
-They live near the **Edge of Chaos**.
+**Question:** When the tail gets this messy, does the leading part still follow a rule — and what is the upper bound on its complexity?
 
-**Questions:**
-- When the tail gets this messy, does the Leading Part still follow any rule?  
-- And if so, what is the upper bound on its complexity?
-
-Even at the edge of chaos, I believe some rules still survive.
+**Goal:** Map the structural persistence and computational upper bound of leading-digit complexity at the edge of chaos.
 
 ---
 
