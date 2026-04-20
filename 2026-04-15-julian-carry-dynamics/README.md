@@ -319,7 +319,7 @@ At this stage, the tail is no longer constant, but it follows a repeating cycle.
 I observed that the last two digits of $11^n$ follow a very predictable pattern:     
 $11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$ (repeats every $10$ steps)
 
-**Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary with it?  
+**Question:** When the tail exhibits a repeating pattern, does the leading part synchronize and vary with it?  
 
 **Hypothesis:** The leading part will show **coupling effects** — a synchronized, multi-state oscillation.
 
