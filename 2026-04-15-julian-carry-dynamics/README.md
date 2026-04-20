@@ -270,7 +270,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 
 
 ### 8.3 Core Properties
-1. The Leading Part of a Recurstable Number follows $A_n = B \cdot A_{n-1} + C_J$.
+1. The leading part of a Recurstable Number follows $A_n = B \cdot A_{n-1} + C_J$.
 
 2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit $B \pmod{10} \in \{0, 1, 5, 6\}$. 
 
