@@ -10,7 +10,7 @@
 On a Friday afternoon, while playing in his room, Julian suddenly told me he had made a new mathematical discovery. I often hear about such "discoveries" from him—last time, he figured out the divisibility rule for 8, even recognizing that the hundreds digit must be analyzed based on its parity.
 
 This time, he told me that powers of 5 always result in a number ending in 25. As I reached for a calculator, he said:  
-"Mom, no need for that. It's obvious. Since \(4 \times 25 = 100\), the 'extra' 25 will always stay at the end."
+"Mom, no need for that. It's obvious. Since $4  \times25$ = $100$, the 'extra' 25 will always stay at the end."
 
 I praised him as usual, but his next remark caught me off guard. He explained that because of the carry-over, if you remove the "25" tail from the powers of 5, the relationship between the remaining parts follows a specific rule:  
 "The previous number times 5, plus 1, equals the next number." Furthermore, he observed that the last digit of this leading sequence—the hundreds digit of the original power—oscillates indefinitely between 1 and 6.
@@ -34,7 +34,7 @@ I've observed that Julian prefers to evolve mathematical processes entirely in h
 
 周五下午，Julian 在房间玩耍时，突然跟我说他有了一个新的数学发现。类似的“发现”我常听他提起——记得上一次他发现了 8 的整除规律，甚至知道百位数需要分奇偶来讨论。
 
-这次他告诉我，5 的幂（次方）总会得到以 25 结尾的数字。我正准备拿计算器验证，他却说：“妈妈，不用拿计算器。因为 \(4 \times 25 = 100\)，所以多出来的 25 总会留在末尾。”
+这次他告诉我，5 的幂（次方）总会得到以 25 结尾的数字。我正准备拿计算器验证，他却说：“妈妈，不用拿计算器。因为 $4  \times25$ = $100$，所以多出来的 25 总会留在末尾。”
 
 我照常表扬了他，但他接下来的话让我有些意外。他说，因为要进 1，如果把 5 的幂去掉尾部的 25，剩余部分的关系是：“上一个数字乘以 5 再加 1，等于下一个数字。” 而且他发现，如果观察这部分序列的末位（即原数的百位），数字总是在 1 和 6 之间不停地重复。
 
