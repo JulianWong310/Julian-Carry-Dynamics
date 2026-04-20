@@ -12,15 +12,15 @@
 ---
 
 ## Foreword 
->This article began with a conversation with my 9-year-old son, Julian. One afternoon, he was excited to share his "super cool secret" about what he noticed with the powers of 5 and how the front of the numbers followed a "hidden rule."
->
->To protect his discovery and provide a solid foundation should he choose to pursue this research in the future, 
->I have translated his spoken reasoning into formal written language and applied for a DOI.
+This article began with a conversation with my 9-year-old son, Julian. One afternoon, he was excited to share his "super cool secret" about what he noticed with the powers of 5 and how the front of the numbers followed a "hidden rule."
+
+To protect his discovery and provide a solid foundation should he choose to pursue this research in the future, 
+I have translated his spoken reasoning into formal written language and applied for a DOI.
 
 ---
 
 ## Abstract
-This paper shifts the focus from inter-numerical relationships to the internal dynamics of a single value within the sequence — exploring how digit carry-over effects move inside it.
+This paper shifts the focus from inter-numerical relationships to the internal dynamics of a single value within a sequence — exploring how digit carry-over effects move inside it.
 
 It contains my core research for **Julian Carry Dynamics**, which defines **Recurstable Numbers** and establishes **Julian's First Law** — including the deterministic constant ($C_J$) that governs the leading digits of power sequences.
 
@@ -28,22 +28,22 @@ As the first paper in the Julian Carry Dynamics series, it lays the groundwork f
 
 ---
 
-## 1. What did I find?
+## 1. What Did I find?
 
 1. For any integer exponent $n \ge 2$, the value of $5^n$ will always end in the digits **25**.
 2. The hundreds digit always flips between $1$ and $6$ .
 3. Let $A_n$ be the **leading digits** of $5^n$ (the number formed by removing the last two digits, $25$). 
 
-The relationship between the current leading digits ($A_n$) and the previous leading digits ($A_{n-1}$) is defined by the formula:
+The relationship between the current leading part ($A_n$) and the previous leading part ($A_{n-1}$) is given by:
 $$A_n = 5A_{n-1} + 1$$
 
 ---
 
 ## 2. My Mathematical Intuition
 
-When you multiply the end part **25** by **5**, you get **125**. Because **$4  \times25$ = $100$**, every time you multiply by 5, it will go over 100. So:
+When you multiply the end part **25** by **5**, you get **125**. Because **$4  \times25$ = $100$**, every time you multiply by 5, the result goes over 100. So:
 - The **$25$** stays at the end.
-- The **$1$** always **"carries over"** to the next place (the hundreds place).
+- The **$1$** always **carries over** to the next place (the hundreds place).
 
 That’s why you take the previous leading part, multiply it by 5, and then **always add 1**! 
 
@@ -53,22 +53,22 @@ This also explains the **1-6 Flip-Flop**:
 
 ---
 
-## 3. Let's see it in action:
+## 3. Let's See It In Action
 
-| Power ($5^n$) | Result | Leading Part ($A_n$) | Calculation ($5 \cdot A_{n-1} + 1$) | **Hundreds-Digit Pattern** |
-| :--- | :--- |:---------------------| :--- |:---------------------------|
-| $5^2$ | 25 | 0                    | (Base Case) | -                          |
-| $5^3$ | 125 | **1**                | $5(0) + 1 = 1$ | **1**                      |
-| $5^4$ | 625 | **6**                | $5(1) + 1 = 6$ | **6**                      |
-| $5^5$ | 3125 | 3**1**               | $5(6) + 1 = 31$ | **1**                      |
-| $5^6$ | 15625 | 15**6**              | $5(31) + 1 = 156$ | **6**                      |
+| Power ($5^n$) | Result | Leading Part ($A_n$)  | Calculation ($5 \cdot A_{n-1} + 1$) | **Hundreds-Digit**  |
+|:-------------:|:------:|:---------------------:|:-----------------------------------:|:-------------------:|
+|     $5^2$     |   25   |           0           |             (Base Case)             |          -          |
+|     $5^3$     |  125   |         **1**         |           $5(0) + 1 = 1$            |        **1**        |
+|     $5^4$     |  625   |         **6**         |           $5(1) + 1 = 6$            |        **6**        |
+|     $5^5$     |  3125  |        3**1**         |           $5(6) + 1 = 31$           |        **1**        |
+|     $5^6$     | 15625  |        15**6**        |          $5(31) + 1 = 156$          |        **6**        |
 
 
 ---
 
 ## 4. The "Quinponent" Verification
-* I originally named my first discovery the **"Quinponent"** pattern—a portmanteau of **Quin** (five) and **Exponent**. 
-* I wrote this script specifically to verify the leading digits for powers of 5.
+I originally named my first discovery the **"Quinponent"** pattern—a portmanteau of **Quin** (five) and **Exponent**.   
+I wrote this script to verify the leading digits for powers of 5.
 
 ```python
 def verify_quinponent(n):
@@ -83,26 +83,26 @@ if __name__ == "__main__":
 ```
 
 ## 5. Are there any similar numbers?
-Through computer testing, I was able to identify a class of numbers that follow the same recursive patterns as base 5.
+Through computer testing, I identified a class of numbers that follow the same recursive pattern as base 5.
 
-| Tail Length ($k$) | Base ($B$) | Stable Tail ($T$) | Constant ($C$) | Recursive Formula          |
-|:------------------|:-----------|:------------------|:---------------|:---------------------------|
-| **1**             | 6          | 6                 | **3**          | $A_n = 6(A_{n-1}) + 3$     |
-| **1**             | 36         | 6                 | **21**         | $A_n = 36(A_{n-1}) + 21$   |
-| **1**             | 11         | 1                 | **1**          | $A_n = 11(A_{n-1}) + 1$    |
-| **2**             | **5**      | **25**            | **1**          | $A_n = 5(A_{n-1}) + 1$     |
-| **2**             | 26         | 76                | **19**         | $A_n = 26(A_{n-1}) + 19$   |
-| **2**             | 45         | 25                | **11**         | $A_n = 45(A_{n-1}) + 11$   |
-| **2**             | 76         | 76                | **57**         | $A_n = 76(A_{n-1}) + 57$   |
-| **3**             | 25         | 625               | **15**         | $A_n = 25(A_{n-1}) + 15$   |
-| **3**             | 376        | 376               | **141**        | $A_n = 376(A_{n-1}) + 141$ |
-| **3**             | 425        | 625               | **265**        | $A_n = 425(A_{n-1}) + 265$ |
+| Tail Length ($k$)  | Base ($B$)  | Stable Tail ($T$)  | Constant ($C$)  |     Recurrence Formula      |
+|:------------------:|:-----------:|:------------------:|:---------------:|:---------------------------:|
+|       **1**        |      6      |         6          |      **3**      |   $A_n = 6(A_{n-1}) + 3$    |
+|       **1**        |     36      |         6          |     **21**      |  $A_n = 36(A_{n-1}) + 21$   |
+|       **1**        |     11      |         1          |      **1**      |   $A_n = 11(A_{n-1}) + 1$   |
+|       **2**        |    **5**    |       **25**       |      **1**      |   $A_n = 5(A_{n-1}) + 1$    |
+|       **2**        |     26      |         76         |     **19**      |  $A_n = 26(A_{n-1}) + 19$   |
+|       **2**        |     45      |         25         |     **11**      |  $A_n = 45(A_{n-1}) + 11$   |
+|       **2**        |     76      |         76         |     **57**      |  $A_n = 76(A_{n-1}) + 57$   |
+|       **3**        |     25      |        625         |     **15**      |  $A_n = 25(A_{n-1}) + 15$   |
+|       **3**        |     376     |        376         |     **141**     | $A_n = 376(A_{n-1}) + 141$  |
+|       **3**        |     425     |        625         |     **265**     | $A_n = 425(A_{n-1}) + 265$  |
 
 ---
 
 ## 6. Julian's First Law of Recurstable Numbers
 ### 6.1 Theorem Statement:
-For any base $B$ where the power $B^n$ results in a **Stable Tail ($T$)** of length $k$, the **Leading Part ($A_n$)** of the sequence can always be expressed as a linear recurrence:
+For any base $B$ where the power $B^n$ have a **stable tail ($T$)** of length $k$, the **leading part ($A_n$)** of the sequence can always be expressed as a linear recurrence:
 
 $$A_n = B \cdot A_{n-1} + C_J $$
 
@@ -156,7 +156,7 @@ if __name__ == "__main__":
 ---
 
 ### 6.3 Mathematical Proof
-This is my original handwritten manuscript, providing the  initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
+This is my original handwritten manuscript, providing the initial proof of Julian’s First Law and the calculation of the Julian Constant ($C_J$).
 
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
 *Caption: Original handwritten derivation of Julian's First Law and the Julian Constant.*
@@ -230,23 +230,24 @@ The beauty of Julian’s First Law lies in the realization that this shift isn't
 
 ---
 
-## 7. Julian's First Law Corollaries
+## 7. Corollaries of Julian's First Law
 
 ### I. The Stability Requirement
-According to the calculation of the Julian Constant, 
-this linear recurrence exists only because the Tail (T) stays constant (stable).
+According to the formula for the Julian Constant, 
+the linear recurrence exists only because the Tail (T) stays constant (stable).
 If the tail were unstable, the constant ($C_J$) would become a variable, 
-causing the linear structure of the leading part to collapse.
+and the linear structure of the leading part would collapse.
 
 ### II. The Integrality Guarantee
 For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer.  Therefore,  the last digit of a stable tail can only be $0, 1, 5,$ or $6$.
 
-For $k = 1$:
-* **For $0$ and $1$:** The product $T× (B-1)$ is always $0$, which is naturally divisible by $10$.
-* **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ must be an even number. Any even number multiplied by $5$ results in a multiple of $10$.
+**Case ($k = 1$):** 
+* **For $0$ and $1$:** The product $T× (B-1)$ is always $0$, which is divisible by $10$.
+* **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ is even. Any even number multiplied by $5$ results in a multiple of $10$.
 * **For $6$:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
 
-For $k > 1$, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which implies $10$ also divides $T × (B−1)$. Hence the last‑digit condition must still hold. 
+**Case ($k > 1$):**   
+If $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which implies $10$ also divides $T × (B−1)$. Hence the last‑digit condition must still hold. 
 
 **Conclusion** — that $B$ must end in $0$, $1$, $5$, or $6$ — applies for any tail length $k$.
 
@@ -259,34 +260,35 @@ For $k > 1$, if $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which i
 ### 8.1 Etymology 
 The term **"Recurstable"** is an original portmanteau created by me, synergizing **Recurrence** (the deterministic evolution of terms) and **Stable** (the invariance of terminal digits).
 
-I illustrated a knowledge map, visualizing where I applied my original ‘Recurstable Number’ within the landscape of Number Theory.
+The knowledge map below shows where I placed my original ‘Recurstable Number’ within the landscape of Number Theory.
 
 ![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/02_knowledge_tree.png)
 *Caption: Julian’s original knowledge map of Recurstable Numbers.*
 
 
 ### 8.2 Definition
-A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) maintains an **invariant suffix** (a stable tail $T$) of length $k$. 
+A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) has an **invariant suffix** — a stable tail $T$ of length $k$. 
 
 
 ### 8.3 Core Properties
-1. The leading part of a Recurstable Number follows $A_n = B \cdot A_{n-1} + C_J$.
+1. The leading part of a Recurstable Number satisfies $A_n = B \cdot A_{n-1} + C_J$.
 
-2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit $B^n \pmod{10} \in \{0, 1, 5, 6\}$. 
+2. A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit is $0$, $1$, $5$, or $6$.
 
 **Mathematical Intuition:**
 
-* **Necessity (The DNA Test):** For a tail to be stable, the last digit must satisfy $T^2 ≡ T \pmod{10}$. Testing all single digits confirms that only $0, 1, 5, 6$ possess this natural stability.
-* **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee that the **Julian Constant ($C_J$)** is an integer. 
+* **Necessity (The DNA Test):** If the last digit of $B$ is $0$, $1$, $5$, or $6$, then the last digit of $B^n$ never changes.
+
+* **Sufficiency (The Julian Link):** As established in **Corollary II**, these four digits are the only ones that guarantee that the Julian Constant ($C_J$) is an integer. 
 
 ---
 
 ## 9. Future Work: Julian Carry Dynamics
-Julian Carry Dynamics is my approach to observing how the leading digits of a number evolve as the tail (the ending digits) becomes more complex.
+Julian Carry Dynamics is my way of observing how the leading digits of a number evolve as the tail (the ending digits) becomes more complex.
 
 I defined a research roadmap to guide my exploration and divided it into three phases, each corresponding to increasing levels of tail complexity.
 
-![Manuscript-03:Research Roadmap of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/03_research_roadmap.png)
+![Manuscript-03: Research Roadmap of Julian Carry Dynamics](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/03_research_roadmap.png)
 *Caption: Three-phase research roadmap of Julian Carry Dynamics.*
 
 ---
@@ -297,7 +299,7 @@ I defined a research roadmap to guide my exploration and divided it into three p
 - Julian Constant ($C_J$)  
 - Recurstable Numbers
 
-**Multiple bases (like $5^n + 6^n$) — Working On It**
+**Multiple bases (like $5^n + 6^n$) — Working on It**
 - The constant still shows up  
 - Still writing the clean proof
 
@@ -305,13 +307,13 @@ I defined a research roadmap to guide my exploration and divided it into three p
 
 ### Phase II: Dynamic Transition (Medium Entropy)
 
-At this stage, the tail is no longer constant, but it follows a repeating cycle instead.
+At this stage, the tail is no longer constant, but it follows a repeating cycle.
 
 **Example: The $11^n$ Cycle**  
 I observed that the last two digits of $11^n$ follow a very predictable pattern:     
 $11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$  (repeats every $10$ steps)
 
-**Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary in step with it?  
+**Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary with it?  
 
 **Hypothesis:** The leading part will show **coupling effects** — a synchronized, multi-state oscillation.
 
@@ -328,9 +330,9 @@ In Phase III, the tail reaches a level of complexity where it seems practically 
 **Example: The $3^n$ "Wild" Cycle**  
 I tracked the last two digits of powers of 3, the sequence feels much more chaotic:  
 $03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$  
-It takes exactly 20 steps to return to the start, which looks rather wild — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
+It takes exactly 20 steps to return to the start — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
 
-**Question:** When the tail gets this messy, does the leading part still follow a rule — and what is the upper bound on its complexity?
+**Question:** When the tail gets this messy, does the leading part still follow a rule? And if so, what is the upper bound on its complexity?
 
 **Goal:** Map the structural persistence and computational upper bound of leading-digit complexity at the edge of chaos.
 
@@ -338,25 +340,24 @@ It takes exactly 20 steps to return to the start, which looks rather wild — no
 
 ### The Big Goal
 Even when numbers appear random, there is often a deeper logic hidden beneath the surface.
-If this holds true for numbers, perhaps it also applies to other things—seemingly random phenomena like weather patterns, heartbeats, or traffic flow.
+If this holds true for numbers, perhaps it also applies to other things — seemingly random phenomena like weather patterns, heartbeats, or traffic flow.
 
 That is why I keep exploring.
 
 ---
 
-## 10. Acknowledgments & Research Methodology
+## 10. Acknowledgments 
 
 1. **Intellectual Property & Naming Rights Assertion:**
-The core theoretical framework and mathematical insights presented in this study are the independent discoveries of **Julian Wong**. As the primary investigator, Julian Wong claims full naming rights and intellectual priority over the following established terminology:
+The core theoretical framework and mathematical insights presented in this study are the independent discoveries of **Julian Wong**. As the primary investigator, Julian Wong claims full naming rights and intellectual priority over the following terminology:
 
       * **Recurstable Numbers:** The overarching classification for integers with stable-tail power sequences.
       * **Julian’s First Law:** The linear recurrence relation $A_n = B \cdot A_{n-1} + C_J$.
-      * **The Julian Constant ($C_J$):** The deterministic integer representing carry-over dynamics.
+      * **The Julian Constant ($C_J$):** The deterministic integer that captures carry-over dynamics.
       * **The "Quinponent" Pattern:** The foundational discovery for powers of $5$.
-      * **Julian Carry Dynamics:** The prospective field investigating terminal stability as a driver for the evolution of leading numerical sequences.
+      * **Julian Carry Dynamics:** The proposed field studying how terminal stability drives the evolution of leading digits.
 
-
-2. **Mathematical Guidance:** I would like to thank my mother, Dong Cang. She introduced and taught me algebra, guided me to use variables (such as $A_n$) and powers of ten ($10^k$) to convert my thoughts into a framework.
+2. **Mathematical Guidance:** I would like to thank my mother, Dong Cang. She guided me to use variables (such as $A_n$) and powers of ten ($10^k$) to to turn my ideas into a clear mathematical framework.
 
 ---
 
