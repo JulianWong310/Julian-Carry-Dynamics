@@ -281,7 +281,7 @@ Check each possible last digit $T$:
 * **$T = 6$:** $(1 - B)$ ends in $5 \rightarrow$ $6 \times 5 = 30$ ends in $0$ 
 * **Any other $T$ ($2, 3, 4, 7, 8, 9$):** The product never ends in $0$. 
 
-Thus, only $T= 0, 1, 5, \text{ or } 6$ satisfy the integrality requirement.
+Thus, only $T= 0, 1, 5, \text{ or } 6$ satisfies the integrality requirement.
 
 **For $k > 1$:** if $C_J$ is an integer, then $10^k$ divides $T  \cdot (B - 1)$. This implies $10$ also divides $T  \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
 
