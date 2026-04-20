@@ -1,12 +1,12 @@
 # Julian Carry Dynamics: Part I — The Theory of Recurstable Numbers
-### A Study on How Terminal Stability Determines Leading Behavior in Power Sequences
+## How Terminal Stability Shapes Leading Behavior in Power Sequences
 
 **Author:** Julian Wong  
-**Current Grade:** Grade 3 (Age 9)  
-**Primary Documenter:** Dong Cang  
+**Current Grade:** Grade 3 (Age 9)      
+**Primary Documenter:** Dong Cang    
 **Research Date:** April 2026  
 **Location:** Mississauga, Ontario, Canada  
-**Version:** Part I (Foundational Phase)  
+**Version:** Part I — Foundational Phase   
 **Keywords:** Number Theory, Power Sequences, Linear Recurrence, Stable-Tail Integers
 
 ---
