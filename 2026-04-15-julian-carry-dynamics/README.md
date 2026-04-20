@@ -123,6 +123,7 @@ $$C_J = \frac{B \cdot T - T}{10^k}$$
 * **$k$ :** The number of digits in $T$.
 * **$C_J$ (The Julian Constant)**: A fixed integer derived from the interaction between the base and the stable tail. 
 
+---
 
 ### 6.2 Computational Verification
 I wrote the following Python script to test Julian's First Law.
@@ -256,36 +257,38 @@ The knowledge map below shows where I placed my original ‘Recurstable Number�
 A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) has an **invariant suffix** — a stable tail $T$ of length $k$. 
 
 
-### 7.3 Core Properties
+#### Core Properties of Recurstable Numbers 
 
-1. **Linear Recurrence Relation** The leading part of a Recurstable Number satisfies the following linear recurrence:      
+* **Property I: Linear Recurrence Relation**       
+The leading part of a Recurstable Number satisfies the following linear recurrence:      
    $A_n = B \cdot A_{n-1} + C_J$
 
-2. **The Terminal Digit Condition** A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit is $0$, $1$, $5$, or $6$.
+* **Property II: The Terminal Digit Condition**   
+A positive integer $B$ is a Recurstable Number **if and only if** its terminal digit is $0, 1, 5, \text{ or } 6$.
 
 ---
 
-### 7.4 Mathematical Intuition of Property 2
+### 7.3 Mathematical Intuition of Property II
+The following two subsections prove each direction.
+#### 1. (If):  Last digit is $0, 1, 5, \text{ or } 6$ ⇒ stable tail
+If the last digit of $B$ is $0, 1, 5, \text{ or } 6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
 
-#### **I. Necessity**   
-If the last digit of $0, 1, 5, \text{ or } 6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
-
-#### **II. Sufficiency**    
+#### 2.  (Only If): Stable tail ⇒ last digit must be $0, 1, 5, \text{ or } 6$
 **Proof for $k = 1$:**    
-Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (1 - B)}{10}$ to be an integer, the product $T \cdot (1 - B)$ must end in $0$.
+Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (B - 1)}{10}$ to be an integer, the product $T \cdot (B - 1)$ must end in $0$.
 
 Check each possible last digit $T$:
 * **$T = 0$:** Product is $0 \rightarrow$ ends in $0$ 
-* **$T = 1$:** $(1 - B)$ ends in $0 \rightarrow$ product ends in $0$ 
-* **$T = 5$:** $(1 - B)$ is even $\rightarrow$ $5 \times \text{even}$ ends in $0$ 
-* **$T = 6$:** $(1 - B)$ ends in $5 \rightarrow$ $6 \times 5 = 30$ ends in $0$ 
+* **$T = 1$:** $(B - 1)$ ends in $0 \rightarrow$ product ends in $0$ 
+* **$T = 5$:** $(B - 1)$ is even $\rightarrow$ $5 \times \text{even}$ ends in $0$ 
+* **$T = 6$:** $(B - 1)$ ends in $5 \rightarrow$ $6 \times 5 = 30$ ends in $0$ 
 * **Any other $T$ ($2, 3, 4, 7, 8, 9$):** The product never ends in $0$. 
 
-Thus, only $T= 0, 1, 5, \text{ or } 6$ satisfies the integrality requirement.
+Thus, only $T \in \lbrace 0, 1, 5, 6 \rbrace$ satisfies the integrality requirement. 
 
 **For $k > 1$:** if $C_J$ is an integer, then $10^k$ divides $T  \cdot (B - 1)$. This implies $10$ also divides $T  \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
 
-**Conclusion:** The requirement that $B$ must end in $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
+**Conclusion:** The requirement that the last digit of $B$ is $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
 
 ---
 
