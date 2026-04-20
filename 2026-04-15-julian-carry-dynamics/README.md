@@ -226,7 +226,7 @@ Q.E.D
 
 *Note: According to the formula for the Julian Constant, 
 the linear recurrence exists only because the tail (T) stays constant (stable).
-If the tail were unstable, the constant ($C_J$) would become a variable, 
+If the tail were unstable, the Julian constant would become a variable, 
 and the linear structure of the leading part would collapse.*
 
 ---
@@ -273,7 +273,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 If the last digit of $B$ is $0$, $1$, $5$, or $6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
 
 #### **II. Sufficiency**    
-**For $k = 1$:**    
+**Proof for $k = 1$:**    
 Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (1 - B)}{10}$ to be an integer, the product $T \cdot (1 - B)$ must end in $0$.
 
 Check each possible last digit $T$:
@@ -285,8 +285,7 @@ Check each possible last digit $T$:
 
 Thus, only $T \in \{0, 1, 5, 6\}$ satisfy the integrality requirement.
 
-**For $k > 1$:**    
-If $C_J$ is an integer, then $10^k$ divides $T \cdot (B - 1)$. This implies $10$ also divides $T \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
+**For $k > 1$:** If $C_J$ is an integer, then $10^k$ divides $T \times (B - 1)$. This implies $10$ also divides $T \times (B - 1)$. Hence, the same last-digit condition must still hold. 
 
 **Conclusion:** The requirement that $B$ must end in $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
 
@@ -338,7 +337,8 @@ In Phase III, the tail reaches a level of complexity where it seems practically 
 
 **Example: The $3^n$ "Wild" Cycle**  
 I tracked the last two digits of powers of 3, the sequence feels much more chaotic:  
-$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$       
+$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$   
+
 It takes exactly 20 steps to return to the start — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
 
 **Question:** When the tail gets this messy, does the leading part still follow a rule? And if so, what is the upper bound on its complexity?
