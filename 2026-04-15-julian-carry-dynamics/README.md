@@ -242,12 +242,12 @@ and the linear structure of the leading part would collapse.
 For the Linear Recurrence $A_n = B \cdot A_{n-1} + C_J$ to hold, the **Julian Constant ($C_J$)** must be an integer.  Therefore,  the last digit of a stable tail can only be $0, 1, 5,$ or $6$.
 
 **Case ($k = 1$):** 
-* **For $0$ and $1$:** The product $T× (B-1)$ is always $0$, which is divisible by $10$.
+* **For $0$ and $1$:** The product $T \cdot (B-1)$ is always $0$, which is divisible by $10$.
 * **For $5$:** Since the base $B$ ends in $5$, $(B-1)$ is even. Any even number multiplied by $5$ results in a multiple of $10$.
 * **For $6$:** Since the base $B$ ends in $6$, $(B-1)$ must end in $5$. The product $6 \times 5 = 30$, which is also a multiple of $10$.
 
 **Case ($k > 1$):**   
-If $C_J$  is an integer then $10^k$ divides $T × (B−1)$, which implies $10$ also divides $T × (B−1)$. Hence the last‑digit condition must still hold. 
+If $C_J$  is an integer then $10^k$ divides $T \cdot (B−1)$, which implies $10$ also divides $T \cdot (B−1)$. Hence the last‑digit condition must still hold. 
 
 **Conclusion** — that $B$ must end in $0$, $1$, $5$, or $6$ — applies for any tail length $k$.
 
@@ -311,7 +311,7 @@ At this stage, the tail is no longer constant, but it follows a repeating cycle.
 
 **Example: The $11^n$ Cycle**  
 I observed that the last two digits of $11^n$ follow a very predictable pattern:     
-$11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$  (repeats every $10$ steps)
+$11$, $21$, $31$, $41$, $51$, $61$, $71$, $81$, $91$, $01$... (repeats every $10$ steps)
 
 **Question:** when the tail exhibits a repeating pattern, does the leading part synchronize and vary with it?  
 
@@ -329,7 +329,7 @@ In Phase III, the tail reaches a level of complexity where it seems practically 
 
 **Example: The $3^n$ "Wild" Cycle**  
 I tracked the last two digits of powers of 3, the sequence feels much more chaotic:  
-$03, 09, 27, 81, 43, 29, 87, 61, 83, 49, 47, 41, 23, 69, 07, 21, 63, 89, 67, 01, \dots$  
+$03$, $09$, $27$, $81$, $43$, $29$, $87$, $61$, $83$, $49$, $47$, $41$, $23$, $69$, $07$, $21$, $63$, $89$, $67$, $01$...
 It takes exactly 20 steps to return to the start — not fixed like $5^n$ and not super simple like $11^n$. This behavior lives near the **Edge of Chaos**.
 
 **Question:** When the tail gets this messy, does the leading part still follow a rule? And if so, what is the upper bound on its complexity?
