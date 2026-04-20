@@ -107,12 +107,11 @@ Through computer testing, I identified a class of numbers that follow the same r
 
 ## 6. Julian's First Law of Recurstable Numbers
 ### 6.1 Theorem Statement:
-For any base $B$ where the power $B^n$ have a **stable tail ($T$)** of length $k$, the **leading part ($A_n$)** of the sequence can always be expressed as a linear recurrence:
+For any base $B$ where the power $B^n$ ($n \ge 2$) have a **stable tail ($T$)** of length $k$, the **leading part ($A_n$)** of the sequence can always be expressed as a linear recurrence:
 
 $$A_n = B \cdot A_{n-1} + C_J $$
 
-**The Julian Constant Formula:**
-The constant $C_J$ is determined by the "carry-over" from the tail's multiplication when the tail is stable:
+where $C_J$ is a constant determined by the carry-over from the stable tail when multiplied by the base:
 
 $$C_J = \frac{B \cdot T - T}{10^k}$$
 
@@ -123,7 +122,6 @@ $$C_J = \frac{B \cdot T - T}{10^k}$$
 * **$T$ :** The recurring ending value of $B^n$.
 * **$k$ :** The number of digits in $T$.
 * **$C_J$ (The Julian Constant)**: A fixed integer derived from the interaction between the base and the stable tail. 
-
 
 
 ### 6.2 Computational Verification
@@ -270,7 +268,7 @@ A **Recurstable Number** is a positive integer $B$ such that its power sequence 
 ### 7.4 Mathematical Intuition of Property 2
 
 #### **I. Necessity**   
-If the last digit of $B$ is $0$, $1$, $5$, or $6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
+If the last digit of $0, 1, 5, \text{ or } 6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
 
 #### **II. Sufficiency**    
 **Proof for $k = 1$:**    
@@ -283,9 +281,9 @@ Check each possible last digit $T$:
 * **$T = 6$:** $(1 - B)$ ends in $5 \rightarrow$ $6 \times 5 = 30$ ends in $0$ 
 * **Any other $T$ ($2, 3, 4, 7, 8, 9$):** The product never ends in $0$. 
 
-Thus, only $T \in \{0, 1, 5, 6\}$ satisfy the integrality requirement.
+Thus, only $T= 0, 1, 5, \text{ or } 6$ satisfy the integrality requirement.
 
-**For $k > 1$:** If $C_J$ is an integer, then $10^k$ divides $T \times (B - 1)$. This implies $10$ also divides $T \times (B - 1)$. Hence, the same last-digit condition must still hold. 
+**For $k > 1$:** if $C_J$ is an integer, then $10^k$ divides $T  \cdot (B - 1)$. This implies $10$ also divides $T  \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
 
 **Conclusion:** The requirement that $B$ must end in $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
 
