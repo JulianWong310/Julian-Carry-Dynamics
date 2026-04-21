@@ -10,7 +10,7 @@
 On a Friday afternoon, while playing in his room, Julian suddenly told me he had made a new mathematical discovery. I often hear about such "discoveries" from him—last time, he figured out the divisibility rule for 8, even recognizing that the hundreds digit must be analyzed based on its parity.
 
 This time, he told me that powers of 5 always result in a number ending in 25. As I reached for a calculator, he said:  
-"Mom, no need for that. It's obvious. Since $4  \times25$ = $100$, the 'extra' 25 will always stay at the end."
+"Mom, no need for that. It's obvious. Since $4  \times25$ = $100$, the extra 25 will always stay at the end."
 
 I praised him as usual, but his next remark caught me off guard. He explained that because of the carry-over, if you remove the "25" tail from the powers of 5, the relationship between the remaining parts follows a specific rule:  
 "The previous number times 5, plus 1, equals the next number." Furthermore, he observed that the last digit of this leading sequence—the hundreds digit of the original power—oscillates indefinitely between 1 and 6.
@@ -21,10 +21,9 @@ Thinking this might be a niche branch of number theory worth documenting, I assi
 
 During this process, he made another discovery: all numbers ending in 0, 1, 5, or 6 share similar properties. He explained: because these numbers when multiplied by themselves keep the same last digit, their "tails" remain stable across their powers. Based on this, I assisted him in formalizing the proof and naming for this expansion as well.
 
-Given his young age, I listened to his dictation and typed for him, attempting to "translate" his insights into professional academic terminology. Over two days, Julian completed the first draft of his first math paper.
+Given his young age, I listened to his dictation and typed for him, attempting to "translate" his insights into professional academic terminology. 
 
-Yet, his curiosity didn't stop there. He began raising deeper questions: What happens if we add two Recurstable Numbers together? Is there a universal law hidden within? And if the terminal digits are unstable, can we still find a pattern of order?  
-I told him: "Mama will be right there with you to discover these laws, one by one."
+After a week of dedicated effort, Julian completed the first draft of his first math paper. Yet, his curiosity didn't stop there. He began raising deeper questions: What happens if we add two Recurstable Numbers together? Is there a universal law hidden within? And if the terminal digits are unstable, can we still find a pattern of order? Driven by these new inquiries, Julian has already turned his attention to the study of $11^n$ and $3^n$ with renewed excitement.
 
 I've observed that Julian prefers to evolve mathematical processes entirely in his mind rather than on paper. When asked about his inspiration, he said these patterns just "flash" into his mind. The mathematical intuition he displays gives me a profound sense of responsibility; I know I must work twice as hard to guide his growth.
 
@@ -44,8 +43,8 @@ I've observed that Julian prefers to evolve mathematical processes entirely in h
 
 在此过程中，他再次提出了新的发现：所有以 0、1、5、6 结尾的数字都具有类似的性质。他解释道：因为这些数字乘以自己后，末位依然是它本身，所以它们的幂在尾部一定是稳定的。基于此，我又协助他对这部分新发现也进行了证明和命名。
 
-考虑到他年龄尚小，不宜长时间使用电脑，大多时候是由我倾听他的口述并代为打字。我尝试用自己掌握的知识，尽可能用专业的学术词汇去“翻译”他的想法。Julian 初步勾勒出了他第一份数学研究的轮廓。
+考虑到他年龄尚小，不宜长时间使用电脑，大多时候是由我倾听他的口述并代为打字。我尝试用自己掌握的知识，尽可能用专业的学术词汇去“翻译”他的想法。
 
-但在推导的终点，他反而提出了更多深邃的问题：比如，如果将多个‘尾数稳定数’（Recurstable Numbers）相加，是否依然存在某种普适的恒定规律？如果尾数本身是不稳定的，其中是否也潜伏着尚未被发现的秩序？我告诉他：孩子，妈妈会陪着你，我们一起去把这些规律找出来。
+经过一周的努力，Julian初步勾勒出了他第一份数学研究的轮廓。但在推导的终点，他反而提出了更多深邃的问题：比如，如果将多个‘尾数稳定数’（Recurstable Numbers）相加，是否依然存在某种普适的恒定规律？如果尾数本身是不稳定的，其中是否也潜伏着尚未被发现的秩序？带着这些新的疑问，Julian又迫不及待地转向了对 11^n 和 3^n 的研究。
 
 我观察发现，Julian 喜欢在脑海中演化数学过程，而不习惯动笔。问及灵感来源，他说这些规律都是突然“乍现”并被捕捉到的。他展现出的数学直觉让我深感责任重大，唯有加倍努力，才能更好地引导他的成长。
