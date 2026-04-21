@@ -12,8 +12,7 @@ On a Friday afternoon, while playing in his room, Julian suddenly told me he had
 This time, he told me that powers of 5 always result in a number ending in 25. As I reached for a calculator, he said:  
 "Mom, no need for that. It's obvious. Since $4  \times25$ = $100$, the extra 25 will always stay at the end."
 
-I praised him as usual, but his next remark caught me off guard. He explained that because of the carry-over, if you remove the "25" tail from the powers of 5, the relationship between the remaining parts follows a specific rule:  
-"The previous number times 5, plus 1, equals the next number." Furthermore, he observed that the last digit of this leading sequence—the hundreds digit of the original power—oscillates indefinitely between 1 and 6.
+I praised him as usual, but his next remark caught me off guard. He explained that because of the carry-over, if you remove the "25" tail from the powers of 5, the relationship between the remaining parts follows a specific rule: "The previous number times 5, plus 1, equals the next number." Furthermore, he observed that the last digit of this leading sequence—the hundreds digit of the original power—oscillates indefinitely between 1 and 6.
 
 I didn't understand at first, so he eagerly explained with examples. Once I grasped the algebraic logic, I realized this was a remarkable discovery. He excitedly asked if he could name it after himself.
 
