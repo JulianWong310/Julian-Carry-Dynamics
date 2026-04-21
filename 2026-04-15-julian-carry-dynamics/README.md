@@ -274,7 +274,7 @@ A positive integer $B$ is a Recurstable Number **if and only if** its terminal d
 If the last digit of $B$ is $0, 1, 5, \text{ or } 6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
 
 #### 2.  Necessity: Stable tail ⇒ last digit must be $0, 1, 5, \text{ or } 6$
-**Proof for $k = 1$:**    
+For $k = 1$:    
 Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (B - 1)}{10}$ to be an integer, the product $T \cdot (B - 1)$ must end in $0$.
 
 Check each possible last digit $T$:
@@ -286,7 +286,7 @@ Check each possible last digit $T$:
 
 Thus, only $T \in \lbrace 0, 1, 5, 6 \rbrace$ satisfies the integrality requirement. 
 
-**For $k > 1$:** if $C_J$ is an integer, then $10^k$ divides $T  \cdot (B - 1)$. This implies $10$ also divides $T  \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
+For $k > 1$: if $C_J$ is an integer, then $10^k$ divides $T  \cdot (B - 1)$. This implies $10$ also divides $T  \cdot (B - 1)$. Hence, the same last-digit condition must still hold. 
 
 **Conclusion:** The requirement that the last digit of $B$ is $0, 1, 5, \text{or } 6$ applies for any tail length $k$.
 
