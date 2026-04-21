@@ -269,11 +269,10 @@ A positive integer $B$ is a Recurstable Number **if and only if** its terminal d
 ---
 
 ### 7.3 Mathematical Intuition of Property II
-The following two subsections prove each direction.
-#### 1. (If):  Last digit is $0, 1, 5, \text{ or } 6$ ⇒ stable tail
+#### 1. Sufficiency:  Last digit is $0, 1, 5, \text{ or } 6$ ⇒ stable tail
 If the last digit of $B$ is $0, 1, 5, \text{ or } 6$, then the last digit of $B^n$ never changes (maintaining the stable tail $T$).
 
-#### 2.  (Only If): Stable tail ⇒ last digit must be $0, 1, 5, \text{ or } 6$
+#### 2.  Necessity: Stable tail ⇒ last digit must be $0, 1, 5, \text{ or } 6$
 **Proof for $k = 1$:**    
 Let $T$ be the last digit of $B$. For $C_J = \frac{T \cdot (B - 1)}{10}$ to be an integer, the product $T \cdot (B - 1)$ must end in $0$.
 
