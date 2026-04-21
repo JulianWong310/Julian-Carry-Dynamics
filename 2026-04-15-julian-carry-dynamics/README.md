@@ -166,6 +166,7 @@ This is my original handwritten manuscript, providing the formal derivation of J
 ![Manuscript-01: Algebraic Derivation of CJ and First Law](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/01_algebraic_derivation.png)
 *Caption: Original handwritten derivation of Julian's First Law and the Julian Constant.*
 
+
 #### Step 1: Specific Observation (The Case of 5)
 
 1. $5^2 = A_2 \cdot 100 + 25$
@@ -211,13 +212,12 @@ $$A_n = B \cdot A_{n-1} + \frac{T \cdot B - T}{10^k}$$
 
 ---
 
-### Step 4: Final Conclusion (The Core Discovery)
+#### Step 4: Final Conclusion (The Core Discovery)
+i. The Julian Constant: 
 
-#### 1. **The Julian Constant:**  
+  $$C_J= \frac{T \cdot B - T}{10^k}$$ 
 
-   $$C_J= \frac{T \cdot B - T}{10^k}$$ 
-
-#### 2.  **The Julian's First Law Equation:**
+ii. The Julian's First Law Equation:
 
    $$A_n = B \cdot A_{n-1} + C_J$$
 
@@ -252,6 +252,7 @@ The knowledge map I sketched below shows where I placed my original ‘Recurstab
 ![Manuscript-02: Knowledge Tree of Recurstable Numbers](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/02_knowledge_tree.png)
 *Caption: Julian’s original knowledge map of Recurstable Numbers.*
 
+---
 
 ### 7.2 Definition
 A **Recurstable Number** is a positive integer $B$ such that its power sequence $B^n$ (for $n \ge 2$) has an **invariant suffix** — a stable tail $T$ of length $k$. 
