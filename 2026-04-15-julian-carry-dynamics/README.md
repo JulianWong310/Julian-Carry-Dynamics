@@ -106,7 +106,7 @@ Through computer testing, I identified a class of numbers that follow the same r
 ---
 
 ## 6. Julian's First Law of Recurstable Numbers
-### 6.1 Theorem Statement:
+### 6.1 Theorem Statement
 For any base $B$ where the power $B^n$ ($n \ge 2$) have a **stable tail ($T$)** of length $k$, the **leading part ($A_n$)** of the sequence can always be expressed as a linear recurrence:
 
 $$A_n = B \cdot A_{n-1} + C_J $$
@@ -292,7 +292,9 @@ Thus, only $T \in \lbrace 0, 1, 5, 6 \rbrace$ satisfies the integrality requirem
 ---
 
 ## 8. Future Work: Julian Carry Dynamics
-Julian Carry Dynamics is my way of observing how the leading digits of a number evolve as the tail (the ending digits) becomes more complex.
+### 8.1 Theoretical Framework
+
+**Julian Carry Dynamics** is my way of observing how the leading digits of a number evolve as the tail (the ending digits) becomes more complex.
 
 I defined a research roadmap to guide my exploration and divided it into three phases, each corresponding to increasing levels of tail complexity.
 
@@ -301,7 +303,7 @@ I defined a research roadmap to guide my exploration and divided it into three p
 
 ---
 
-### Phase I: Static Stability (Low Entropy)
+### 8.2 Phase I: Static Stability (Low Entropy)
 **Single base (like $5^n$) — Completed** 
 - Julian's First Law  
 - Julian Constant ($C_J$)  
@@ -313,7 +315,7 @@ I defined a research roadmap to guide my exploration and divided it into three p
 
 ---
 
-### Phase II: Dynamic Transition (Medium Entropy)
+### 8.3 Phase II: Dynamic Transition (Medium Entropy)
 
 At this stage, the tail is no longer constant, but it follows a repeating cycle.
 
@@ -327,7 +329,7 @@ $11, 21, 31, 41, 51, 61, 71, 81, 91, 01, \dots$ (repeats every $10$ steps)
 
 ---
 
-### Phase III: Edge of Chaos (High Entropy)
+### 8.4 Phase III: Edge of Chaos (High Entropy)
 I sketched this conceptual diagram to visualize the phase transition from low to high tail entropy.
 
 ![Manuscript-04: Phase Transition Concept](https://github.com/JulianWong310/Julian-Carry-Dynamics/blob/main/2026-04-15-julian-carry-dynamics/asset/04_phase_transition_concept.png)
@@ -347,7 +349,7 @@ It takes exactly 20 steps to return to the start — not fixed like $5^n$ and no
 
 ---
 
-### The Big Goal
+### 8.5 The Big Goal
 Even when numbers appear random, there is often a deeper logic hidden beneath the surface.
 If this holds true for numbers, perhaps it also applies to other things — seemingly random phenomena like weather patterns, heartbeats, or traffic flow.
 
