@@ -369,7 +369,7 @@ The core theoretical framework and mathematical insights presented in this study
       * **The "Quinponent" Pattern:** The foundational discovery for powers of $5$.
       * **Julian Carry Dynamics:** The proposed field studying how terminal stability drives the evolution of leading digits.
 
-2. **Mathematical Guidance:** I would like to thank my mother, Dong Cang. She guided me to use variables (such as $A_n$) and powers of ten ($10^k$) to to turn my ideas into a clear mathematical framework.
+2. **Mathematical Guidance:** I would like to thank my mother, Dong Cang. She guided me to use variables (such as $A_n$) to turn my ideas into a clear mathematical framework.
 
 ---
 
