@@ -37,7 +37,7 @@ As the first paper in the Julian Carry Dynamics series, it lays the groundwork f
 
 1. For any integer exponent $n \ge 2$, the value of $5^n$ will always end in the digits **25**.
 2. The hundreds digit always flips between $1$ and $6$ .
-3. Let $A_n$ be the **leading digits** of $5^n$ (the number formed by removing the last two digits, $25$). The relationship between the current leading part ($A_n$) and the previous leading part ($A_{n-1}$) is given by:
+3. Let $A_n$ be the **leading part** of $5^n$ (the number formed by removing the last two digits, $25$). The relationship between the current leading part ($A_n$) and the previous leading part ($A_{n-1}$) is given by:
 
 $$A_n = 5 \cdot A_{n-1} + 1$$
 
@@ -168,11 +168,11 @@ This is my original handwritten manuscript, providing the formal derivation of J
 
 #### Step 1: Specific Observation (The Case of 5)
 
-1. $5^2 = A_2 \cdot 100 + 25$
-2. $5^3 = A_3 \cdot 100 + 25$
-3. $\vdots$ (pattern continues...)
-4. $5^{n-1} = A_{n-1} \cdot 100 + 25$
-5. $5^n = A_n \cdot 100 + 25$
+$$5^2 = A_2 \cdot 100 + 25$$
+$$5^3 = A_3 \cdot 100 + 25$$
+$$\vdots$$
+$$5^{n-1} = A_{n-1} \cdot 100 + 25$$
+$$5^n = A_n \cdot 100 + 25$$
 
 ---
 
@@ -193,10 +193,10 @@ $$A_n = 5 \cdot A_{n-1} + 1$$
 #### Step 3: Deriving the General Law
 For any base $B$ with a stable tail $T$ of length $k$:
 
-1. $B^n = 10^k \cdot A_n + T$
-2. $B^{n-1} = 10^k \cdot A_{n-1} + T$
+$$①. B^n = 10^k \cdot A_n + T$$
+$$②. B^{n-1} = 10^k \cdot A_{n-1} + T$$
 
-From (2), multiply by $B$:
+From ②, multiply by $B$:
 
 $$B^n = 10^k \cdot B \cdot A_{n-1} + T \cdot B$$
 
