@@ -33,14 +33,13 @@ As the first paper in the Julian Carry Dynamics series, it lays the groundwork f
 
 ---
 
-## 1. What Did I find?
+## 1. What Did I Find?
 
 1. For any integer exponent $n \ge 2$, the value of $5^n$ will always end in the digits **25**.
 2. The hundreds digit always flips between $1$ and $6$ .
-3. Let $A_n$ be the **leading digits** of $5^n$ (the number formed by removing the last two digits, $25$). 
+3. Let $A_n$ be the **leading digits** of $5^n$ (the number formed by removing the last two digits, $25$). The relationship between the current leading part ($A_n$) and the previous leading part ($A_{n-1}$) is given by:
 
-The relationship between the current leading part ($A_n$) and the previous leading part ($A_{n-1}$) is given by:
-$$A_n = 5A_{n-1} + 1$$
+$$A_n = 5 \cdot A_{n-1} + 1$$
 
 ---
 
@@ -186,7 +185,8 @@ $$A_n \cdot 100 + 25 = A_{n-1} \cdot 500 + 100+25$$
 $$A_n \cdot 100 + 25 = 100(A_{n-1} \cdot 5 + 1) + 25$$
 
 By canceling the $25$ and dividing by $100$:
-$$A_n = A_{n-1} \cdot 5 + 1$$
+
+$$A_n = 5 \cdot A_{n-1} + 1$$
 
 ---
 
